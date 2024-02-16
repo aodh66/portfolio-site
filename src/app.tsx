@@ -2,7 +2,7 @@
 // import preactLogo from './assets/preact.svg'
 // import viteLogo from '/vite.svg'
 import './app.css'
-import './index.css'
+// import './index.css'
 // @ts-ignore
 import Header from "/components/Header";
 
@@ -38,6 +38,7 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p> */}
+      <p>cutout text, with mountain image behind, black or other dark bg in front</p>
       <p>
         Top bar, simple, no burger menus or anything. Just main, blog, contact.
         Short intro on me, efficiency, what I'm up to. Links at the bottom.

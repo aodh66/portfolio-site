@@ -18,7 +18,7 @@ const Header = (props: object) => {
     width: "90%",
 }} />
           <h1 className="text-3xl font-bold underline text-red-600 bg-green-400">
-      Hello world!
+      Hello world! Test
     </h1>
         <div className="headerline w-4/5 h-px bg-indigo-400">
           test

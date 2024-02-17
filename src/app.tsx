@@ -3,6 +3,7 @@ import { useState, useEffect } from "preact/hooks";
 // import viteLogo from '/vite.svg'
 import './app.css'
 // import './index.css'
+// import Mountain from "./assets/forest_light.jpg"
 
 // @ts-ignore
 import Header from "/components/Header";
@@ -30,8 +31,21 @@ export function App() {
     })
 
   return (
-    <>
-    <Header name="Aidan" />
+    <div className="flex flex-col">
+    <Header />
+  <div className="flex flex-col mb-6">
+     <div className="background self-center w-3/4"> <h1 className="hero">Hi I'm Aidan.</h1></div>
+      <div className="mb-3 italic">
+        <p>I'm a Full-Stack Web Developer, currently in the UK.</p>
+        <p>I love working in close knit teams, and making useful, intuitive sites for the end user.</p>
+      </div>
+      <p>I also have an <strong><s>undiagnosed obsession</s></strong> keen interest in 
+      efficiency through all aspects of my life. As such, in the Blog section, you can also find 
+      logs of my journey to pare down my multiday camping kit to ludicrous levels, as well as 
+      delusional diatribes about building supremely ergonomic keyboards/input devices.</p>
+  </div>
+
+    <h2>To Do Section/Ideas</h2>
     <p>Add darkmode lightmode toggle button</p>
       <p>cutout text, with mountain image behind, black or other dark bg in front. Multiple fonts.</p>
       <p>
@@ -39,6 +53,7 @@ export function App() {
         Short intro on me, efficiency, what I'm up to. Links at the bottom.
       </p>
       <p>Navbar component. Links component. Contact.</p>
+      <p>technologies section</p>
 
     {/* This is where you add the section dynamically generating cards for every entry.
     The Card element itself probs wouldn't live in here */}
@@ -46,7 +61,7 @@ export function App() {
 
       <p>Responsive, use the small images, swap to large if screen width is Tablet or larger (768px).</p>
       <Footer isMobile={isMobile} />
-    </>
+    </div>
   )
 }
 

@@ -6,6 +6,30 @@
   /* background-color: grey; */
 }
 
+.background {
+  background-image: url("./assets/mountain_colorb.jpg");
+  /* background-image: url("./assets/mountain_medb.jpg"); */
+  /* background-image: url("./assets/forest_light.jpg"); */
+  /* background-image: url("./assets/forest_med.jpg"); */
+  /* background-image: url("./assets/mountain_brightb.jpg"); */
+  /* background-image: url("./assets/mountain_darkb.jpg"); */
+  background-size: cover;
+  background-position: top 25% right 50%;
+  /* background-position: top 45% right 50%; */
+  /* background-position: top 60% right 50%; */
+  /* background-position: top 35% right 50%; */
+  /* background-position: top 60% right 50%; */
+  /* background-position: top 60% right 50%; */
+}
+
+.hero {
+  color: white;
+  background: #0c0025;
+  mix-blend-mode: darken ;
+  font-weight: 900;
+  font-size: 5em;
+}
+
 /* .logo {
   height: 6em;
   padding: 1.5em;

@@ -3,8 +3,11 @@
 // import viteLogo from '/vite.svg'
 import './app.css'
 // import './index.css'
+
 // @ts-ignore
 import Header from "/components/Header";
+// @ts-ignore
+import Footer from "/components/Footer";
 
 export function App() {
   // const [count, setCount] = useState(0)
@@ -38,12 +41,14 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p> */}
-      <p>cutout text, with mountain image behind, black or other dark bg in front</p>
+      <p>cutout text, with mountain image behind, black or other dark bg in front. Multiple fonts.</p>
       <p>
         Top bar, simple, no burger menus or anything. Just main, blog, contact.
         Short intro on me, efficiency, what I'm up to. Links at the bottom.
       </p>
       <p>Navbar component. Links component. Contact.</p>
+      <p>have larger logos/images, then use the smaller ones</p>
+      <Footer />
     </>
   )
 }

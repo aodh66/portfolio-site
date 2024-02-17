@@ -1,6 +1,6 @@
-const Header = () =>
-  // props: object
-  {
+const Header = (
+    // props: object
+) =>  {
     return (
       // <div className="headercontainer flex flex-col min-w-full w-full border-2 border-yellow-500 border-solid justify-items-center">
       <div className="headerlinks mb-10 flex w-full justify-between border-2 border-transparent border-b-gray-500 p-4">

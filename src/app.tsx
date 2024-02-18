@@ -46,6 +46,7 @@ export function App() {
   </div>
 
     <h2>To Do Section/Ideas</h2>
+    <p>Try adding background circles and decoration.</p>
     <p>Add darkmode lightmode toggle button</p>
       <p>cutout text, with mountain image behind, black or other dark bg in front. Multiple fonts.</p>
       <p>

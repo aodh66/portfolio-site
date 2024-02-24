@@ -119,47 +119,47 @@ export function App() {
       },
       {
         name: "TypeScript",
-        imgPath: "./src/assets/tech/typescript-icon.svg", 
+        imgPath: "/tech/typescript-icon.svg", 
         imgUrl: "https://www.svgrepo.com/show/354478/typescript-icon.svg",
       },
       {
         name: "React",
-        imgPath: "./src/assets/tech/react-logo.svg", 
+        imgPath: "/tech/react-logo.svg", 
         imgUrl: "https://www.svgrepo.com/show/452092/react.svg",
       },
       {
         name: "Node",
-        imgPath: "./src/assets/tech/node-js.svg", 
+        imgPath: "/tech/node-js.svg", 
         imgUrl: "https://www.svgrepo.com/show/452075/node-js.svg",
       },
       {
         name: "HTML",
-        imgPath: "./src/assets/tech/html-5.svg", 
+        imgPath: "/tech/html-5.svg", 
         imgUrl: "https://www.svgrepo.com/show/452228/html-5.svg",
       },
       {
         name: "CSS",
-        imgPath: "./src/assets/tech/css-3.svg", 
+        imgPath: "/tech/css-3.svg", 
         imgUrl: "https://www.svgrepo.com/show/452185/css-3.svg",
       },
       {
         name: "SQL",
-        imgPath: "./src/assets/tech/sql.svg", 
+        imgPath: "/tech/sql.svg", 
         imgUrl: "https://www.svgrepo.com/show/374093/sql.svg",
       },
       {
         name: "Tailwind",
-        imgPath: "./src/assets/tech/tailwind.svg", 
+        imgPath: "/tech/tailwind.svg", 
         imgUrl: "https://www.svgrepo.com/show/374118/tailwind.svg",
       },
       {
         name: "Material UI",
-        imgPath: "./src/assets/tech/material-ui.svg", 
+        imgPath: "/tech/material-ui.svg", 
         imgUrl: "https://www.svgrepo.com/show/354048/material-ui.svg",
       },
       {
         name: "Electron",
-        imgPath: "./src/assets/tech/electron.svg", 
+        imgPath: "/tech/electron.svg", 
         imgUrl: "https://www.svgrepo.com/show/378796/electron.svg",
       },
     ]

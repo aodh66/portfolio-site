@@ -10,7 +10,6 @@ interface TechProps {
 
 // const CardSection = ({project: {title, url, description, imgPath, imgUrl, github, order} = {}}: object) =>  {
 const TechSection = ({ skills }: TechProps) => {
-  console.log("🚀 ~ TechSection ~ skills:", skills)
   
   // const projects: Array<object> = [
   //   {

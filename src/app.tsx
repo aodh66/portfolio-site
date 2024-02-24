@@ -114,8 +114,8 @@ export function App() {
     const skills: TechProp[] = [
       {
         name: "JavaScript",
-        imgPath: "./src/assets/tech/javascript-logo.svg", 
-        imgUrl: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+        imgPath: "/src/assets/tech/javascript-logo.svg", 
+        // imgUrl: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
       },
       {
         name: "TypeScript",

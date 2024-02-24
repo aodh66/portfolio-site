@@ -4,6 +4,7 @@ import { useState, useEffect } from "preact/hooks";
 import './app.css'
 // import './index.css'
 // import Mountain from "./assets/forest_light.jpg"
+// import js from "./assets/tech/javascript-logo-svgrepo-com.svg"
 
 // @ts-ignore
 import Header from "/components/Header";
@@ -14,7 +15,7 @@ import { ExampleProp } from "/components/Card";
 // @ts-ignore
 import CardSection from "/components/CardSection";
 // @ts-ignore
-// import TechSection from "/components/TechSection";
+import { TechSection, TechProp } from "/components/TechSection";
 
 // interface ExampleProp {
 //   title: string;
@@ -110,9 +111,58 @@ export function App() {
       },
     ];
 
-    const tech: object = {
-      
-    }
+    const skills: TechProp[] = [
+      {
+        name: "JavaScript",
+        imgPath: "./src/assets/tech/javascript-logo.svg", 
+        imgUrl: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+      },
+      {
+        name: "TypeScript",
+        imgPath: "./src/assets/tech/typescript-icon.svg", 
+        imgUrl: "https://www.svgrepo.com/show/354478/typescript-icon.svg",
+      },
+      {
+        name: "React",
+        imgPath: "./src/assets/tech/react-logo.svg", 
+        imgUrl: "https://www.svgrepo.com/show/452092/react.svg",
+      },
+      {
+        name: "Node",
+        imgPath: "./src/assets/tech/node-js.svg", 
+        imgUrl: "https://www.svgrepo.com/show/452075/node-js.svg",
+      },
+      {
+        name: "HTML",
+        imgPath: "./src/assets/tech/html-5.svg", 
+        imgUrl: "https://www.svgrepo.com/show/452228/html-5.svg",
+      },
+      {
+        name: "CSS",
+        imgPath: "./src/assets/tech/css-3.svg", 
+        imgUrl: "https://www.svgrepo.com/show/452185/css-3.svg",
+      },
+      {
+        name: "SQL",
+        imgPath: "./src/assets/tech/sql.svg", 
+        imgUrl: "https://www.svgrepo.com/show/374093/sql.svg",
+      },
+      {
+        name: "Tailwind",
+        imgPath: "./src/assets/tech/tailwind.svg", 
+        imgUrl: "https://www.svgrepo.com/show/374118/tailwind.svg",
+      },
+      {
+        name: "Material UI",
+        imgPath: "./src/assets/tech/material-ui.svg", 
+        imgUrl: "https://www.svgrepo.com/show/354048/material-ui.svg",
+      },
+      {
+        name: "Electron",
+        imgPath: "./src/assets/tech/electron.svg", 
+        imgUrl: "https://www.svgrepo.com/show/378796/electron.svg",
+      },
+    ]
 
   return (
     <div className="flex flex-col">
@@ -140,7 +190,8 @@ export function App() {
   </div>
 
   <div className="mb-6">
-    <h2 className="text-xl font-black mb-2">Technologies I'm familiar with Section</h2>
+    <h2 className="text-xl font-black mb-2">Skills</h2>
+    <TechSection skills={skills} />
     <p>This should probably be a component with a subcomponent like the cards for each icon. 
       List icon and name.</p>
   </div>

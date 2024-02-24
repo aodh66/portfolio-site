@@ -1,31 +1,16 @@
-import { Card, ExampleProp } from "./Card";
+interface TechProp {
+  name: string;
+  imgPath: string;
+  imgUrl: string;
+}
 
-// interface ExampleProp {
-//   title: string;
-//   url: string;
-//   description: string;
-//   imgPath: string;
-//   imgUrl: string;
-//   github: string;
-//   order: number;
-// }
-
-// const singleProject: object = {
-//   title: "Eclectic Shop",
-//   url: "https://ch15-fs-shop.vercel.app/",
-//   description: "React fullstack hypothetical shop project.",
-//   imgPath: "",
-//   imgUrl: "",
-//   github: "https://github.com/aodh66/ch15-fs-shop",
-//   order: 1,
-// };
-
-interface ExampleProps {
-  projects: ExampleProp[]
+interface TechProps {
+    skills: TechProp[]
 }
 
 // const CardSection = ({project: {title, url, description, imgPath, imgUrl, github, order} = {}}: object) =>  {
-const CardSection = ({ projects }: ExampleProps) => {
+const TechSection = ({ skills }: TechProps) => {
+  console.log("🚀 ~ TechSection ~ skills:", skills)
   
   // const projects: Array<object> = [
   //   {
@@ -42,12 +27,18 @@ const CardSection = ({ projects }: ExampleProps) => {
 
 
   return (
-    <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project: ExampleProp) => (
-        <Card {...project} />
+    <div className="flex flex-wrap gap-4 justify-around">
+      {skills.map((skill: TechProp) => (
+        <div className="card w-20 h-20 flex flex-col border-2 rounded-xl items-center gap-3 p-2 border-transparent">
+        <img src={skill.imgPath || skill.imgUrl} alt={skill.name} className="h-8 w-8" />
+            <p className="text-xs">{skill.name}</p>
+        </div>
       ))}
     </div>
   );
 };
 
-export default CardSection;
+export {
+    type TechProp,
+    TechSection,
+  }

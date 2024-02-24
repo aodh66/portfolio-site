@@ -54,7 +54,7 @@ export function App() {
         imgPath: "",
         imgUrl: "",
         github: "",
-        splash: "/src/assets/mountain_bright.jpg",
+        splash: "/tempCardImg/forest_light.jpg",
         order: 0,
       },
       {
@@ -64,7 +64,7 @@ export function App() {
         imgPath: "",
         imgUrl: "",
         github: "https://github.com/aodh66/ch15-fs-shop",
-        splash: "/src/assets/mountain_dark.jpg",
+        splash: "/tempCardImg/mountain_dark.jpg",
         order: 1,
       },
       {
@@ -76,7 +76,7 @@ export function App() {
         imgUrl:
           "https://raw.githubusercontent.com/aodh66/bs-utility/main/images/bs-utility.png",
         github: "https://github.com/aodh66/bs-utility",
-        splash: "/src/assets/mountain_med.jpg",
+        splash: "/tempCardImg/forest_dark.jpg",
         order: 2,
       },
       {
@@ -88,7 +88,7 @@ export function App() {
         imgUrl:
           "",
         github: "",
-        splash: "/src/assets/mountain_color.jpg",
+        splash: "/tempCardImg/mountain_color.jpg",
         order: 3,
       },
       {
@@ -100,6 +100,7 @@ export function App() {
         imgUrl:
           "",
         github: "",
+        splash: "/tempCardImg/forest_med.jpg",
         order: 4,
       },
       {
@@ -111,6 +112,7 @@ export function App() {
         imgUrl:
           "",
         github: "",
+        splash: "/tempCardImg/mountain_med.jpg",
         order: 5,
       },
     ];

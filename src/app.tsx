@@ -115,7 +115,7 @@ export function App() {
       {
         name: "JavaScript",
         imgPath: "/tech/javascript-logo.svg", 
-        // imgUrl: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
+        imgUrl: "https://www.svgrepo.com/show/303206/javascript-logo.svg",
       },
       {
         name: "TypeScript",
@@ -143,9 +143,19 @@ export function App() {
         imgUrl: "https://www.svgrepo.com/show/452185/css-3.svg",
       },
       {
-        name: "SQL",
+        name: "(No)SQL",
         imgPath: "/tech/sql.svg", 
         imgUrl: "https://www.svgrepo.com/show/374093/sql.svg",
+      },
+      {
+        name: "PostgreSQL",
+        imgPath: "/tech/postgresql.svg", 
+        imgUrl: "https://www.svgrepo.com/show/354200/postgresql.svg",
+      },
+      {
+        name: "MongoDB",
+        imgPath: "/tech/mongodb.svg", 
+        imgUrl: "https://www.svgrepo.com/show/373845/mongo.svg",
       },
       {
         name: "Tailwind",
@@ -182,18 +192,11 @@ export function App() {
   <div className="mb-6 flex flex-col align-items-center">
     <h2 className="text-xl font-black mb-2"><a href={`/portfolio`} className="justify-self-end link ">Portfolio</a></h2>
     <CardSection projects={projects} />
-<p>This should be a component that has a subcomponent. Subcomponent has image of project, 
-  name, description, purpose (technology learning wise)?</p>
-  <p>Element on this page should be hard coded for performance as it won't be changed 
-    often, but the portfolio page should be a db, so I can just add projects into it easily.
-    The ones in the DB should have an order value, so I can sort them easily.</p>
   </div>
 
   <div className="mb-6">
     <h2 className="text-xl font-black mb-2">Skills</h2>
     <TechSection skills={skills} />
-    <p>This should probably be a component with a subcomponent like the cards for each icon. 
-      List icon and name.</p>
   </div>
 
       <Footer isMobile={isMobile} />

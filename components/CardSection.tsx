@@ -20,8 +20,12 @@ interface ExampleProp {
 //   order: 1,
 // };
 
+interface ExampleProps {
+  projects: ExampleProp[]
+}
+
 // const CardSection = ({project: {title, url, description, imgPath, imgUrl, github, order} = {}}: object) =>  {
-const CardSection = ({projects}: Array<ExampleProp>) => {
+const CardSection = ({ projects }: ExampleProps) => {
   
   // const projects: Array<object> = [
   //   {
@@ -34,64 +38,17 @@ const CardSection = ({projects}: Array<ExampleProp>) => {
   //     github: "",
   //     order: 1,
   //   },
-  //   {
-  //     title: "Eclectic Shop",
-  //     url: "https://ch15-fs-shop.vercel.app/",
-  //     description: "React fullstack hypothetical shop project.",
-  //     imgPath: "",
-  //     imgUrl: "",
-  //     github: "https://github.com/aodh66/ch15-fs-shop",
-  //     order: 2,
-  //   },
-  //   {
-  //     title: "Backup & Save Utility",
-  //     url: "https://github.com/aodh66/bs-utility",
-  //     description:
-  //       "Electron application to periodically or on command back up a folder",
-  //     imgPath: "",
-  //     imgUrl:
-  //       "https://raw.githubusercontent.com/aodh66/bs-utility/main/images/bs-utility.png",
-  //     github: "https://github.com/aodh66/bs-utility",
-  //     order: 3,
-  //   },
-  //   {
-  //     title: "",
-  //     url: "",
-  //     description:
-  //       "",
-  //     imgPath: "",
-  //     imgUrl:
-  //       "",
-  //     github: "",
-  //     order: 4,
-  //   },
-  //   {
-  //     title: "",
-  //     url: "",
-  //     description:
-  //       "",
-  //     imgPath: "",
-  //     imgUrl:
-  //       "",
-  //     github: "",
-  //     order: 5,
-  //   },
-  //   {
-  //     title: "",
-  //     url: "",
-  //     description:
-  //       "",
-  //     imgPath: "",
-  //     imgUrl:
-  //       "",
-  //     github: "",
-  //     order: 6,
-  //   },
   // ];
+
+//   type ViewProps = React.ComponentProps<typeof View>
+//   console.log("🚀 ~ CardSection ~ ViewProps:", ViewProps)
+
+// type InputProps = React.ComponentProps<'input'>
+// console.log("🚀 ~ CardSection ~ InputProps:", InputProps)
 
   return (
     <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project: object) => (
+      {projects.map((project: ExampleProp) => (
         <Card {...project} />
       ))}
     </div>

@@ -16,15 +16,15 @@ import CardSection from "/components/CardSection";
 // @ts-ignore
 // import TechSection from "/components/TechSection";
 
-// interface ExampleProp {
-//   title: string;
-//   url: string;
-//   description: string;
-//   imgPath: string;
-//   imgUrl: string;
-//   github: string;
-//   order: number;
-// }
+interface ExampleProp {
+  title: string;
+  url: string;
+  description: string;
+  imgPath: string;
+  imgUrl: string;
+  github: string;
+  order: number;
+}
 
 export function App() {
   // const [count, setCount] = useState(0)
@@ -44,7 +44,7 @@ export function App() {
       window.addEventListener("resize", handleResize)
     })
 
-    const projects: Array<object> = [
+    const projects: ExampleProp[] = [
       {
         title: "Destiny Item Application",
         url: "",

@@ -1,4 +1,4 @@
-import ghLogoBig from "/src/assets/GitHub_Logo_White.png";
+// import ghLogoBig from "/src/assets/GitHub_Logo_White.png";
 
 interface ExampleProp {
   title: string,
@@ -11,7 +11,7 @@ interface ExampleProp {
 }
 
 const Card = (props: ExampleProp) =>  {
-  // console.log("🚀 ~ Card ~ props:", props)
+  console.log("🚀 ~ Card ~ props:", props)
   return (
       // <div className="w-1/4 h-96">
         <div className="card min-w-full h-40 flex border-2 rounded-xl items-center gap-3 p-2 border-transparent">

@@ -1,3 +1,10 @@
+/* Variable Declarations */
+:root {
+  /* --heroBorderRad: 8rem; */
+  --bg-color: #0c0025;
+  --card-bg: rgba(0, 0, 0, 0.425);
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,7 +15,7 @@
 
 .background {
   /* background-image: url("./assets/mountain_colorb.jpg"); */
-  background-image: url("./assets/mountain_medb.jpg");
+  background-image: url("./assets/mountain_med.jpg");
   /* background-image: url("./assets/forest_light.jpg"); */
   /* background-image: url("./assets/forest_med.jpg"); */
   /* background-image: url("./assets/mountain_brightb.jpg"); */
@@ -20,16 +27,42 @@
   /* background-position: top 35% right 50%; */
   /* background-position: top 60% right 50%; */
   /* background-position: top 60% right 50%; */
+  /* border: 1px solid red; */
+  border-radius: var(--heroBorderRad);
+  border-radius: 8rem;
+  width: 65%;
+  box-shadow: 0 0 20px 20px var(--bg-color);
 }
 
 .hero {
-  color: white;
-  background: #0c0025;
+  color: hsl(0, 0%, 100%);
+  background: var(--bg-color);
   mix-blend-mode: darken ;
   font-weight: 900;
   font-size: 8vw;
   text-wrap: nowrap;
-  /* box-shadow: 60px -16px teal; */
+  /* border-radius: var(--heroBorderRad); */
+}
+
+.card {
+background: var(--card-bg);
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    /* background-image: url("./assets/mountain_colorb.jpg"); */
+    background-image: url("./assets/mountain_medb.jpg");
+    /* background-image: url("./assets/forest_light.jpg"); */
+    /* background-image: url("./assets/forest_med.jpg"); */
+    /* background-image: url("./assets/mountain_brightb.jpg"); */
+    /* background-image: url("./assets/mountain_darkb.jpg"); */
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .hero {
+    font-size: 115.2px;
+  }
 }
 
 /* .logo {

@@ -63,11 +63,37 @@ a:before{
 background: var(--card-bg);
 box-shadow: 0 0 10px black;
 /* filter: drop-shadow(0 0 0.75rem crimson); */
+overflow: hidden;
+position: relative;
+
 }
 
 .card:hover {
   box-shadow: 0 0 10px var(--light);
 
+}
+
+.cardSplash {
+  transition: 0.75s;
+  z-index: 1;
+  margin-left: -8px;
+  position: absolute;
+  width: 120%;
+}
+
+.splashTitle {
+  transition: 0.75s;
+  z-index: 2;
+  position: absolute;
+  background-color: hsla(259, 100%, 7%, 0.5);
+  box-shadow: 0 0 10px hsl(258, 100%, 7%);
+  padding: 0px 2px 5px;
+  border-radius: 10px;
+}
+
+.card:hover .cardSplash,
+.card:hover .splashTitle {
+opacity: 0%;
 }
 
 @media screen and (min-width: 768px) {

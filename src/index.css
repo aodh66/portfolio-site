@@ -28,12 +28,13 @@
 .link {
   /* color: red; */
   position: relative;
+  padding-bottom: 2px;
 }
 
-@keyframes linkUnderline {
+/* @keyframes linkUnderline {
   0% {  width: 50%; left: 25%;}
   100% {  width: 100%; left: 0%;}
-}
+} */
 
 .link:before {
   content: "";

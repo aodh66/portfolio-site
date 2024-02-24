@@ -11,20 +11,19 @@ interface ExampleProp {
 }
 
 const Card = (props: ExampleProp) =>  {
-  console.log("🚀 ~ Card ~ props:", props)
   return (
       // <div className="w-1/4 h-96">
         <div className="card min-w-full h-40 flex border-2 rounded-xl items-center gap-3 p-2 border-transparent">
             <img src={props.imgPath || props.imgUrl} alt={props.title} className="w-1/3 h-3/4" />
             {props.github ? (
             <div className="flex flex-col gap-1">
-                <a href={props.url} className="font-semibold text-lg">{props.title}</a>
+                <a href={props.url} className="font-semibold text-lg link">{props.title}</a>
                 <p className="text-xs">{props.description}</p>
-                <a href={props.github}>Github</a>
+                <a href={props.github}>Github CONSIDER IMAGE HERE</a>
             </div>
             ) : (
             <div>
-                <a href={props.url} className="font-semibold text-lg">{props.title}</a>
+                <a href={props.url} className="font-semibold text-lg link">{props.title}</a>
                 <p className="text-xs">{props.description}</p>
             </div>)}
         </div>
@@ -32,7 +31,10 @@ const Card = (props: ExampleProp) =>  {
     );
 };
 
-export default Card;
+export {
+  type ExampleProp,
+  Card,
+}
 
 
 

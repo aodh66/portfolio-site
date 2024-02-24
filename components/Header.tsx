@@ -4,7 +4,7 @@ const Header = (
     return (
       // <div className="headercontainer flex flex-col min-w-full w-full border-2 border-yellow-500 border-solid justify-items-center">
       <div className="headerlinks mb-10 flex w-full justify-between border-2 border-transparent border-b-gray-500 p-4">
-        <a href={`/`} className="justify-self-start">
+        <a href={`/`} className="justify-self-start link">
           Aidan Meehan
         </a>
         <a href={`/`} className="hidden justify-self-center sm:block">
@@ -12,10 +12,10 @@ const Header = (
         </a>
         {/* <a href={`/`} class="justify-self-center" ><img src={Logo} class="logo" alt="aidan's logo" /></a> */}
         <div className="flex gap-4">
-          <a href={`/blog`} className="justify-self-end">
+          <a href={`/blog`} className="justify-self-end link">
             Blog
           </a>
-          <a href={`/contact`} className="justify-self-end">
+          <a href={`/contact`} className="justify-self-end link">
             Contact
           </a>
         </div>

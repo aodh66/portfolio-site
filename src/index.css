@@ -4,13 +4,16 @@
 @tailwind utilities;
 
  :root {
+  --light: #ffffff;
+  --page-bg: #0c0025;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgb(255, 255, 255);
-  background-color: #0c0025;
+  color: var(--light);
+  background-color: var(--page-bg);
   background-image: url("assets/chaotic-bg.svg");
   background-size: 2560px;
   background-repeat: no-repeat;
@@ -21,6 +24,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.link {
+  /* color: red; */
+  position: relative;
+}
+
+@keyframes linkUnderline {
+  0% {  width: 50%; left: 25%;}
+  100% {  width: 100%; left: 0%;}
+}
+
+.link:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 2px solid var(--light);
+  transition: 1s;
+}
+
+.link:hover:before {
+  /* animation: linkUnderline 1s linear; */
+  width: 100%;
+  left: 0%;
+}
+
 
 /* a {
   font-weight: 500;

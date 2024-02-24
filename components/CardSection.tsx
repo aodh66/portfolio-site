@@ -1,14 +1,14 @@
-import Card from "./Card";
+import { Card, ExampleProp } from "./Card";
 
-interface ExampleProp {
-  title: string;
-  url: string;
-  description: string;
-  imgPath: string;
-  imgUrl: string;
-  github: string;
-  order: number;
-}
+// interface ExampleProp {
+//   title: string;
+//   url: string;
+//   description: string;
+//   imgPath: string;
+//   imgUrl: string;
+//   github: string;
+//   order: number;
+// }
 
 // const singleProject: object = {
 //   title: "Eclectic Shop",
@@ -40,11 +40,6 @@ const CardSection = ({ projects }: ExampleProps) => {
   //   },
   // ];
 
-//   type ViewProps = React.ComponentProps<typeof View>
-//   console.log("🚀 ~ CardSection ~ ViewProps:", ViewProps)
-
-// type InputProps = React.ComponentProps<'input'>
-// console.log("🚀 ~ CardSection ~ InputProps:", InputProps)
 
   return (
     <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">

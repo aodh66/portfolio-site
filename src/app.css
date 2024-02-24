@@ -3,6 +3,7 @@
   /* --heroBorderRad: 8rem; */
   --bg-color: #0c0025;
   --card-bg: rgba(0, 0, 0, 0.425);
+  --light: white;
 }
 
 #app {
@@ -34,6 +35,20 @@
   box-shadow: 0 0 20px 20px var(--bg-color);
 }
 
+/* a {
+  color: red;
+}
+
+a:before{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 1px solid red;
+} */
+
 .hero {
   color: hsl(0, 0%, 100%);
   background: var(--bg-color);
@@ -46,6 +61,13 @@
 
 .card {
 background: var(--card-bg);
+box-shadow: 0 0 10px black;
+/* filter: drop-shadow(0 0 0.75rem crimson); */
+}
+
+.card:hover {
+  box-shadow: 0 0 10px var(--light);
+
 }
 
 @media screen and (min-width: 768px) {

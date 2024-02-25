@@ -7,7 +7,7 @@ import Header from "/components/Header";
 // @ts-ignore
 import Footer from "/components/Footer";
 
-export function Contact() {
+export function NotFound() {
   // const [count, setCount] = useState(0)
   const [isMobile, setIsMobile] = useState(false);
 
@@ -32,7 +32,7 @@ export function Contact() {
 
       <Header />
 
-    <h1>This is the contact page with an email form</h1>
+    <h1>Sorry, this page doesn't exist.</h1>
 
       <Footer isMobile={isMobile} />
 

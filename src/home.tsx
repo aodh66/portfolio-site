@@ -15,7 +15,7 @@ import CardSection from "/components/CardSection";
 // @ts-ignore
 import { TechSection, TechProp } from "/components/TechSection";
 
-export function App() {
+export function Home() {
   // const [count, setCount] = useState(0)
   const [isMobile, setIsMobile] = useState(false);
 

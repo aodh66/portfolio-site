@@ -1,11 +1,11 @@
-/* @ts-ignore */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
  :root {
-  --light: #ffffff;
-  --page-bg: #0c0025;
+  /* Variable Declarations */
+  --light: hsl(0, 0%, 100%);
+  --page-bg: hsl(259, 100%, 7%);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,15 +26,9 @@
 }
 
 .link {
-  /* color: red; */
   position: relative;
   padding-bottom: 2px;
 }
-
-/* @keyframes linkUnderline {
-  0% {  width: 50%; left: 25%;}
-  100% {  width: 100%; left: 0%;}
-} */
 
 .link:before {
   content: "";
@@ -48,10 +42,18 @@
 }
 
 .link:hover:before {
-  /* animation: linkUnderline 1s linear; */
   width: 100%;
   left: 0%;
 }
+
+
+
+
+
+
+
+
+
 
 
 /* a {

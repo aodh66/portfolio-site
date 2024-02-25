@@ -1,7 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
 // import { Link } from "preact-router"
-// import preactLogo from './assets/preact.svg'
-// import viteLogo from '/vite.svg'
 import "./app.css";
 
 // @ts-ignore

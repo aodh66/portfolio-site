@@ -1,8 +1,5 @@
-const Header = (
-    // props: object
-) =>  {
+const Header = () =>  {
     return (
-      // <div className="headercontainer flex flex-col min-w-full w-full border-2 border-yellow-500 border-solid justify-items-center">
       <div className="headerlinks mb-10 flex w-full justify-between border-2 border-transparent border-b-gray-500 p-4">
         <a href={`/`} className="justify-self-start link">
           Aidan Meehan
@@ -24,16 +21,3 @@ const Header = (
   };
 
 export default Header;
-
-{
-  /* <hr style={{
-    // color: 'blue',
-    backgroundColor: 'red',
-    height: "0.2em",
-    width: "100%",
-}} />
-        <div className="headerline w-full h-1 bg-green-400">
-          test
-          </div> */
-}
-// </div>

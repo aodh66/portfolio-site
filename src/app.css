@@ -1,9 +1,8 @@
 /* Variable Declarations */
 :root {
-  /* --heroBorderRad: 8rem; */
-  --bg-color: #0c0025;
-  --card-bg: rgba(0, 0, 0, 0.425);
-  --light: white;
+  --bg-color: hsl(259, 100%, 7%);
+  --card-bg: hsla(0, 0%, 0%, 0.425);
+  --light: hsl(0, 0%, 100%);
 }
 
 #app {
@@ -11,7 +10,6 @@
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  /* background-color: grey; */
 }
 
 .background {
@@ -35,20 +33,6 @@
   box-shadow: 0 0 20px 20px var(--bg-color);
 }
 
-/* a {
-  color: red;
-}
-
-a:before{
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 1px;
-  bottom: 0;
-  left: 25%;
-  border-bottom: 1px solid red;
-} */
-
 .hero {
   color: hsl(0, 0%, 100%);
   background: var(--bg-color);
@@ -56,21 +40,17 @@ a:before{
   font-weight: 900;
   font-size: 8vw;
   text-wrap: nowrap;
-  /* border-radius: var(--heroBorderRad); */
 }
 
 .card {
 background: var(--card-bg);
-box-shadow: 0 0 10px black;
-/* filter: drop-shadow(0 0 0.75rem crimson); */
+box-shadow: 0 0 10px hsl(0, 0%, 0%);
 overflow: hidden;
 position: relative;
-
 }
 
 .card:hover {
   box-shadow: 0 0 10px var(--light);
-
 }
 
 .cardSplash {
@@ -86,8 +66,6 @@ position: relative;
   transition: 0.75s;
   z-index: 2;
   position: absolute;
-  /* background-color: hsla(259, 100%, 7%, 0.5);
-  box-shadow: 0 0 10px hsl(258, 100%, 7%); */
   text-shadow: 1px 1px 10px hsl(258, 100%, 7%);
   padding: 0px 2px 5px;
   border-radius: 10px;
@@ -116,6 +94,15 @@ opacity: 0%;
   }
 }
 
+
+
+
+
+
+
+
+
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
@@ -134,23 +121,3 @@ opacity: 0%;
 .read-the-docs {
   color: #888;
 } */
-
-.headercontainer {
-  /* display: flex;
-  flex-direction: column;
-  border: red 2px solid;
-  align-items: center; */
-}
-
-.headerlinks {
-  /* display: flex; */
-  /* width: 100%; */
-  /* gap: 1em ; */
-  /* justify-content: space-between; */
-  
-}
-
-.headerline {
-  /* background: green; */
-  /* background-color: green; */
-}

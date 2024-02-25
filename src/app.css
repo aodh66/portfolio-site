@@ -78,7 +78,8 @@ position: relative;
   z-index: 1;
   margin-left: -8px;
   position: absolute;
-  width: 120%;
+  width: 100%;
+  pointer-events: none;
 }
 
 .splashTitle {
@@ -89,6 +90,7 @@ position: relative;
   box-shadow: 0 0 10px hsl(258, 100%, 7%);
   padding: 0px 2px 5px;
   border-radius: 10px;
+  pointer-events: none;
 }
 
 .card:hover .cardSplash,

@@ -80,10 +80,10 @@ export function App() {
         order: 2,
       },
       {
-        title: "Placeholder1",
-        url: "",
+        title: "Habitica Homage",
+        url: "https://habitica-homage.netlify.app/",
         description:
-          "Placeholder description",
+          "Copied with no JS to practice CSS",
         imgPath: "",
         imgUrl:
           "",

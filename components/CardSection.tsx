@@ -11,42 +11,32 @@ import { Card, ExampleProp } from "./Card";
 // }
 
 // const singleProject: object = {
-//   title: "Eclectic Shop",
-//   url: "https://ch15-fs-shop.vercel.app/",
-//   description: "React fullstack hypothetical shop project.",
-//   imgPath: "",
-//   imgUrl: "",
-//   github: "https://github.com/aodh66/ch15-fs-shop",
-//   order: 1,
-// };
+      //   title: "Destiny Item App",
+      //   url: "",
+      //   description:
+      //     "React app using Bungie and Steam API to manage ingame inventory.",
+      //   imgPath: "",
+      //   imgUrl: "",
+      //   github: "",
+      //   splash: "/tempCardImg/forest_light.jpg",
+      //   order: 0,
+      // },
 
 interface ExampleProps {
   projects: ExampleProp[]
 }
 
-// const CardSection = ({project: {title, url, description, imgPath, imgUrl, github, order} = {}}: object) =>  {
 const CardSection = ({ projects }: ExampleProps) => {
-  
-  // const projects: Array<object> = [
-  //   {
-  //     title: "Destiny Item Application",
-  //     url: "",
-  //     description:
-  //       "React application interfacing with Game and Steam API to manage ingame inventory.",
-  //     imgPath: "",
-  //     imgUrl: "",
-  //     github: "",
-  //     order: 1,
-  //   },
-  // ];
-
 
   return (
+    <div className="mb-6 flex flex-col align-items-center">
+    <h2 className="text-xl font-black mb-2"><a href={`/portfolio`} className="justify-self-end link ">Portfolio</a></h2>
     <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project: ExampleProp) => (
         <Card {...project} />
-      ))}
+        ))}
     </div>
+        </div>
   );
 };
 

@@ -1,5 +1,3 @@
-// import ghLogoBig from "/src/assets/GitHub_Logo_White.png";
-
 interface ExampleProp {
   title: string;
   url: string;
@@ -13,7 +11,6 @@ interface ExampleProp {
 
 const Card = (props: ExampleProp) => {
   return (
-    // <div className="w-1/4 h-96">
     <div className="card flex h-40 min-w-full items-center gap-3 rounded-xl border-2 border-transparent p-2">
       {props.splash ? (
         <>
@@ -43,7 +40,6 @@ const Card = (props: ExampleProp) => {
         </div>
       )}
     </div>
-    // </div>
   );
 };
 

@@ -11,7 +11,7 @@ import Intro from "/components/Intro";
 // @ts-ignore
 import { ExampleProp } from "/components/Card";
 // @ts-ignore
-import CardSection from "/components/CardSection";
+import ProjectSection from "/components/ProjectSection";
 // @ts-ignore
 import { TechSection, TechProp } from "/components/TechSection";
 
@@ -169,7 +169,7 @@ export function Home() {
 
       <Intro />
 
-      <CardSection projects={projects} />
+      <ProjectSection projects={projects} />
 
       <TechSection skills={skills} />
 

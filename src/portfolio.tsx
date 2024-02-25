@@ -8,7 +8,7 @@ import Footer from "/components/Footer";
 // @ts-ignore
 import { ExampleProp } from "/components/Card";
 // @ts-ignore
-import CardSection from "/components/CardSection";
+import ProjectSection from "/components/ProjectSection";
 
 export function Portfolio() {
   // const [count, setCount] = useState(0)
@@ -104,7 +104,8 @@ export function Portfolio() {
     <div className="flex flex-col">
     <Header />
 
-    <CardSection projects={projects} />
+    <ProjectSection projects={projects} />
+    <h1>This is the portfolio page with all of my projects ever</h1>
 
 
       <Footer isMobile={isMobile} />

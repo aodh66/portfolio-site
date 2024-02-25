@@ -86,8 +86,9 @@ position: relative;
   transition: 0.75s;
   z-index: 2;
   position: absolute;
-  background-color: hsla(259, 100%, 7%, 0.5);
-  box-shadow: 0 0 10px hsl(258, 100%, 7%);
+  /* background-color: hsla(259, 100%, 7%, 0.5);
+  box-shadow: 0 0 10px hsl(258, 100%, 7%); */
+  text-shadow: 1px 1px 10px hsl(258, 100%, 7%);
   padding: 0px 2px 5px;
   border-radius: 10px;
   pointer-events: none;

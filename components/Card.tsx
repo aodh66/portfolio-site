@@ -15,8 +15,12 @@ const Card = (props: ExampleProp) => {
   return (
     // <div className="w-1/4 h-96">
     <div className="card flex h-40 min-w-full items-center gap-3 rounded-xl border-2 border-transparent p-2">
-      <p className="splashTitle text-3xl font-semibold">{props.title}</p>
-      <img src={props.splash} alt={props.title} className="cardSplash" />
+      {props.splash ? (
+        <>
+          <p className="splashTitle text-3xl font-semibold">{props.title}</p>
+          <img src={props.splash} alt={props.title} className="cardSplash" />
+        </>
+      ) : null}
       <img
         src={props.imgPath || props.imgUrl}
         alt={props.title}

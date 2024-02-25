@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+// import { useState, useEffect } from "preact/hooks";
 import './app.css'
 
 // @ts-ignore
@@ -11,22 +11,6 @@ import { ExampleProp } from "/components/Card";
 import ProjectSection from "/components/ProjectSection";
 
 export function Portfolio() {
-  // const [count, setCount] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
-     
-    //check screen size
-    const handleResize = () => {
-      if (window.innerWidth < 767) {
-          setIsMobile(true)
-      } else {
-          setIsMobile(false)
-      }
-    }
-    
-    // resize event listener
-    useEffect(() => {
-      window.addEventListener("resize", handleResize)
-    })
 
     const projects: ExampleProp[] = [
       {
@@ -108,7 +92,7 @@ export function Portfolio() {
     <h1>This is the portfolio page with all of my projects ever</h1>
 
 
-      <Footer isMobile={isMobile} />
+      <Footer />
     </div>
   )
 }

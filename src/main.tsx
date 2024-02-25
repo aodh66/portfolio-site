@@ -9,13 +9,14 @@ import { Router, Route } from 'preact-router';
 
 import './index.css'
 
+// This file controls all of the routing
 const Main = () => (
     <Router>
       <Route path="/" component={Home} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/contact" component={Contact} />
       <Route path="/blog/:id?" component={Blog} />
-      <Route path="/*" component={NotFound} />
+      <Route path="*" component={NotFound} />
     </Router>
   );
 

@@ -31,7 +31,7 @@ const ProjectSection = ({ projects }: ExampleProps) => {
 
   return (
     <div className="mb-6 flex flex-col align-items-center">
-    <h2 className="text-xl font-black mb-2"><Link activeClassName="active" href={`/portfolio`} className="justify-self-end link ">Portfolio</Link></h2>
+    <h2 className="text-xl font-black mb-2"><Link href={`/portfolio`} className="justify-self-end link ">Portfolio</Link></h2>
     <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project: ExampleProp) => (
         <Card {...project} />

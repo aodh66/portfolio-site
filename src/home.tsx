@@ -1,5 +1,5 @@
-import { useState, useEffect } from "preact/hooks";
-// import { Link } from "preact-router"
+// import { useState, useEffect } from "preact/hooks";
+
 import "./app.css";
 
 // @ts-ignore
@@ -16,22 +16,6 @@ import ProjectSection from "/components/ProjectSection";
 import { TechSection, TechProp } from "/components/TechSection";
 
 export function Home() {
-  // const [count, setCount] = useState(0)
-  const [isMobile, setIsMobile] = useState(false);
-
-  //check screen size
-  const handleResize = () => {
-    if (window.innerWidth < 767) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  // resize event listener
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  });
 
   const projects: ExampleProp[] = [
     {
@@ -173,7 +157,7 @@ export function Home() {
 
       <TechSection skills={skills} />
 
-      <Footer isMobile={isMobile} />
+      <Footer />
 
     </div>
   );

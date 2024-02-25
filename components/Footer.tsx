@@ -1,13 +1,28 @@
+import { useState, useEffect } from "preact/hooks";
+
 import liLogo from "/src/assets/In-small-white.png";
 import ghLogo from "/src/assets/github-mark-white.png";
 import liLogoBig from "/src/assets/LinkedIn-med-white2.png";
 import ghLogoBig from "/src/assets/GitHub_Logo_White.png";
 
-interface propObject {
-  isMobile: boolean;
-};
+const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-const Footer = (props: propObject) => {
+  //check screen size
+  const handleResize = () => {
+    if (window.innerWidth < 767) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // resize event listener
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
+
+
   return (
     <div className="footerlinks mb-10 mt-10 flex w-full justify-around border-2 border-transparent border-t-gray-500 p-4">
       <a
@@ -15,14 +30,14 @@ const Footer = (props: propObject) => {
         className=""
         target="_blank"
       >
-        {props.isMobile ? (
+        {isMobile ? (
           <img src={liLogo} className="h-9" alt="LinkedIn logo" />
         ) : (
           <img src={liLogoBig} className="h-9" alt="LinkedIn logo" />
         )}
       </a>
       <a href="https://github.com/aodh66" className="" target="_blank">
-        {props.isMobile ? (
+        {isMobile ? (
           <img src={ghLogo} className="h-9" alt="Github logo" />
         ) : (
           <div className="flex gap-1">

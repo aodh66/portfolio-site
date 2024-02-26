@@ -71,14 +71,12 @@ export function Blog() {
     fetchData();
   }, []);
 
-  // new Date(post.createdAt).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
-
   return (
     <div className="flex flex-col">
       <Header />
 
       <div className="align-items-center mb-6 flex flex-col">
-        <h1 className="mb-2 text-xl font-black">Portfolio</h1>
+        <h1 className="mb-2 text-xl font-black">Blog</h1>
         <div className="flex flex-col gap-4">
           {data.map((post: Post) => (
             <div className="card flex h-32 min-w-full items-center justify-around gap-3 rounded-xl border-2 border-transparent p-2">

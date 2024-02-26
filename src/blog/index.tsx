@@ -1,12 +1,7 @@
-// import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 // import { Link } from "preact-router"
 
-// import { HYGRAPH_ENDPOINT, HYGRAPH_TOKEN } from './settings';
-
-import { 
-  // GraphQLClient, 
-  gql 
-} from 'graphql-request';
+import { gql } from "graphql-request";
 
 import "../app.css";
 
@@ -15,86 +10,75 @@ import Header from "/components/Header";
 // @ts-ignore
 import Footer from "/components/Footer";
 
-// ! IF THIS IS NOT WORKING, TRY PREFIXING THE VARIABLES WITH 'VITE_'
-// const hygraph = new GraphQLClient(
-//   import.meta.env.HYGRAPH_ENDPOINT
-//   // import.meta.env.VITE_HYGRAPH_ENDPOINT
-// console.log("🚀 ~ import.meta.env.VITE_HYGRAPH_ENDPOINT:", `Bearer ${import.meta.env.VITE_HYGRAPH_ENDPOINT}`)
-// );
+const AllPosts = gql`
+  query AllPosts {
+    blogPosts(orderBy: publishedAt_DESC) {
+      body
+      createdAt
+      title
+      id
+      slug
+      updatedAt
+      heroImage {
+        url
+        width
+        height
+      }
+    }
+  }
+`;
 
-// const hygraph = new GraphQLClient(
-//   `${import.meta.env.HYGRAPH_ENDPOINT}`,
-//   {
-//     headers: {
-//       Authorization: `Bearer ${import.meta.env.HYGRAPH_TOKEN}`
-//     }
-//   }
-// );
+export function Blog() {
+  const [data, setData] = useState([]);
+  const apiUrl = `${import.meta.env.VITE_HYGRAPH_FAST_ENDPOINT}`;
 
-export function Blog({ ssd=[] }: any) {
-console.log("🚀 ~ Blog ~ ssd:", ssd)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            query: AllPosts,
+          }),
+        });
+
+        const result = await response.json();
+        setData(result.data.blogPosts);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="flex flex-col">
-
       <Header />
 
       <h1>This is the blog page with a bunch of posts</h1>
+      
+      <div>
+        <h1>Your CMS Data</h1>
+        <ul>
+          {data.map((post) => (
+            <li>
+              <p>{post.title}</p>
+              <p>{post.id}</p>
+              <p>{post.slug}</p>
+              <p>{post.createdAt}</p>
+              <p>{post.body}</p>
+              <p>{post.heroImage.url}</p>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <Footer />
-
     </div>
   );
-}
-
-const AllPosts = gql`
-query AllPosts {
-  blogPosts(orderBy: publishedAt_DESC) {
-    body
-    createdAt
-    title
-    id
-    slug
-    updatedAt
-    heroImage {
-      url
-      width
-      height
-    }
-  }
-}
-`
-
-// export async function getStaticProps() {
-//   const { posts }: any = await hygraph.request(AllPosts)
-//   console.log("🚀 ~ getStaticProps ~ posts:", posts)
-
-//   return {
-//     props: {
-//       ssd: posts,
-//     }
-//   }
-// }
-
-export const getStaticProps = async () => {
-  const allPosts = await fetch(import.meta.env.HYGRAPH_FAST_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": `application/json; charset="UTF-8`,
-        Authorization: `Bearer ${import.meta.env.HYGRAPH_TOKEN}`, // "Authorization"
-      },
-      body: JSON.stringify({
-        query: AllPosts,
-      }),
-    })
-      .then((res) => res.json())
-      .catch((err) => console.log(err));
-    console.log('allposts', allPosts);
-    const posts = allPosts.data.blogPosts;
-    console.log('posts', posts);
-    return {
-      props: {
-        ssd: posts,
-      },
-    };
 }

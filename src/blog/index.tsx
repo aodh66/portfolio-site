@@ -3,7 +3,10 @@
 
 // import { HYGRAPH_ENDPOINT, HYGRAPH_TOKEN } from './settings';
 
-import { GraphQLClient, gql } from 'graphql-request';
+import { 
+  // GraphQLClient, 
+  gql 
+} from 'graphql-request';
 
 import "../app.css";
 
@@ -74,7 +77,7 @@ query AllPosts {
 // }
 
 export const getStaticProps = async () => {
-  const allPosts = await fetch(import.meta.env.HYGRAPH_ENDPOINT, {
+  const allPosts = await fetch(import.meta.env.HYGRAPH_FAST_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": `application/json; charset="UTF-8`,

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-// import { Link } from "preact-router"
+import { Link } from "preact-router";
 
 import { gql } from "graphql-request";
 
@@ -29,9 +29,9 @@ const AllPosts = gql`
 `;
 
 interface HeroImage {
-    url: string;
-    width: number;
-    height: number;
+  url: string;
+  width: number;
+  height: number;
 }
 
 interface Post {
@@ -71,27 +71,52 @@ export function Blog() {
     fetchData();
   }, []);
 
+  // new Date(post.createdAt).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
+
   return (
     <div className="flex flex-col">
       <Header />
 
-      <h1>This is the blog page with a bunch of posts</h1>
-      
-      <div>
-        <h1>Your CMS Data</h1>
-        <ul>
+      <div className="align-items-center mb-6 flex flex-col">
+        <h1 className="mb-2 text-xl font-black">Portfolio</h1>
+        <div className="flex flex-col gap-4">
           {data.map((post: Post) => (
-            <li>
-              <p>{post.title}</p>
-              <p>{post.id}</p>
-              <p>{post.slug}</p>
-              <p>{post.createdAt}</p>
-              <p>{post.body}</p>
-              <p>{post.heroImage.url}</p>
-              <p>{post.body}</p>
-            </li>
+            <div className="card flex h-32 min-w-full items-center justify-around gap-3 rounded-xl border-2 border-transparent p-2">
+              {post.heroImage ? (
+                <>
+                  <p className="splashTitle text-3xl font-semibold">
+                    {post.title}
+                  </p>
+                  <img
+                    src={post.heroImage.url}
+                    alt={post.title}
+                    className="cardSplash"
+                  />
+                  <img
+                    src={post.heroImage.url}
+                    alt={post.title}
+                    className="w-30 h-20"
+                  />
+                </>
+              ) : null}
+              <h3>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="link  justify-self-center text-xl font-bold"
+                >
+                  {post.title}
+                </Link>
+              </h3>
+              <p className="justify-self-end italic">
+                {new Date(post.createdAt).toLocaleDateString("en-gb", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       <Footer />

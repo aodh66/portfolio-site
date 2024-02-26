@@ -53,6 +53,10 @@ position: relative;
   box-shadow: 0 0 10px var(--light);
 }
 
+.card:hover.blog {
+  box-shadow: 0 0 10px hsl(0, 0%, 0%);
+}
+
 .cardSplash {
   transition: 0.75s;
   z-index: 1;
@@ -75,6 +79,29 @@ position: relative;
 .card:hover .cardSplash,
 .card:hover .splashTitle {
 opacity: 0%;
+}
+
+/* ! FORMAT THE MD WITH THESE  */
+.markdown {
+  text-align: left;
+}
+
+.markdown h1 {
+  font-weight: 900;
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.markdown h2 {
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 0.5em;
+}
+
+.markdown h3 {
+  font-weight: 600;
+  font-size: 1em;
+  margin: 0.5em;
 }
 
 @media screen and (min-width: 768px) {

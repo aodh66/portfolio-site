@@ -28,6 +28,22 @@ const AllPosts = gql`
   }
 `;
 
+interface HeroImage {
+    url: string;
+    width: number;
+    height: number;
+}
+
+interface Post {
+  body: string;
+  createdAt: string;
+  title: string;
+  id: string;
+  slug: string;
+  updatedAt: string;
+  heroImage: HeroImage;
+}
+
 export function Blog() {
   const [data, setData] = useState([]);
   const apiUrl = `${import.meta.env.VITE_HYGRAPH_FAST_ENDPOINT}`;
@@ -64,7 +80,7 @@ export function Blog() {
       <div>
         <h1>Your CMS Data</h1>
         <ul>
-          {data.map((post) => (
+          {data.map((post: Post) => (
             <li>
               <p>{post.title}</p>
               <p>{post.id}</p>

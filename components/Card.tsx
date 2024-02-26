@@ -25,9 +25,11 @@ const Card = (props: ExampleProp) => {
       />
       {props.github ? (
         <div className="flex flex-col gap-1">
-          <a href={props.url} className="link text-lg font-semibold">
-            {props.title}
-          </a>
+          <div>
+            <a href={props.url} className="link text-lg font-semibold">
+              {props.title}
+            </a>
+          </div>
           <p className="text-xs">{props.description}</p>
           <a href={props.github}>Github CONSIDER IMAGE HERE</a>
         </div>

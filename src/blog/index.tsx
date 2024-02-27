@@ -78,7 +78,7 @@ export function Blog() {
       <div className="align-items-center mb-6 flex flex-col">
         <h1 className="mb-12 text-5xl font-black">Blog</h1>
         <div className="flex flex-col gap-4">
-          {data.map((post: Post) => (
+          {data && data.map((post: Post) => (
             <Link href={`/blog/${post.slug}`}>
               <div className="card flex min-w-full items-center justify-between gap-3 rounded-xl border-2 border-transparent p-2">
                 {/* {post.heroImage ? (

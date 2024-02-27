@@ -79,40 +79,41 @@ export function Blog() {
         <h1 className="mb-2 text-xl font-black">Blog</h1>
         <div className="flex flex-col gap-4">
           {data.map((post: Post) => (
-            <div className="card flex h-32 min-w-full items-center justify-around gap-3 rounded-xl border-2 border-transparent p-2">
-              {post.heroImage ? (
+            <Link href={`/blog/${post.slug}`}>
+              <div className="card flex min-w-full items-center justify-between gap-3 rounded-xl border-2 border-transparent p-2">
+                {/* {post.heroImage ? (
                 <>
-                  <p className="splashTitle text-3xl font-semibold">
-                    {post.title}
-                  </p>
-                  <img
-                    src={post.heroImage.url}
-                    alt={post.title}
-                    className="cardSplash"
-                  />
-                  <img
-                    src={post.heroImage.url}
-                    alt={post.title}
-                    className="w-30 h-20"
-                  />
+                <p className="splashTitle text-3xl font-semibold">
+                {post.title}
+                </p>
+                <img
+                src={post.heroImage.url}
+                alt={post.title}
+                className="cardSplash"
+                />
+                <img
+                src={post.heroImage.url}
+                alt={post.title}
+                className="w-30 h-20"
+                />
                 </>
-              ) : null}
-              <h3>
-                <Link
+              ) : null} */}
+                <h3 className=" justify-self-center text-xl font-semibold">
+                  {/* <Link
                   href={`/blog/${post.slug}`}
-                  className="link  justify-self-center text-xl font-bold"
-                >
+                  > */}
                   {post.title}
-                </Link>
-              </h3>
-              <p className="justify-self-end italic">
-                {new Date(post.createdAt).toLocaleDateString("en-gb", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </p>
-            </div>
+                  {/* </Link> */}
+                </h3>
+                <p className="justify-self-end italic">
+                  {new Date(post.createdAt).toLocaleDateString("en-gb", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

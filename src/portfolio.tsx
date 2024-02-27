@@ -25,6 +25,7 @@ import { Card, ExampleProp } from "/components/Card";
 const dataArr: ExampleProp[]  = []
 export function Portfolio() {
   const [data, setData] = useState([]);
+  data;
   
   useEffect(() => {
     const fetchData = async () => {

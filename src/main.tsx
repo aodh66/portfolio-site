@@ -20,7 +20,7 @@ const Main = () => (
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={Post} />
-      <Route path="*" component={NotFound} />
+      <Route default path="*" component={NotFound} />
     </Router>
   );
 

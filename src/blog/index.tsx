@@ -78,10 +78,11 @@ export function Blog() {
       <div className="align-items-center mb-6 flex flex-col">
         <h1 className="mb-12 text-5xl font-semibold">Blog</h1>
         <div className="flex flex-col gap-4">
-          {data && data.map((post: Post) => (
-            <Link href={`/blog/${post.slug}`}>
-              <div className="card flex min-w-full items-center justify-between gap-3 rounded-xl border-2 border-transparent p-2">
-                {/* {post.heroImage ? (
+          {data &&
+            data.map((post: Post) => (
+              <Link href={`/blog/${post.slug}`}>
+                <div className="card flex min-w-full items-center justify-between gap-3 rounded-xl border-2 border-transparent p-2">
+                  {/* {post.heroImage ? (
                 <>
                 <p className="splashTitle text-3xl font-semibold">
                 {post.title}
@@ -98,23 +99,23 @@ export function Blog() {
                 />
                 </>
               ) : null} */}
-                <h3 className=" justify-self-center text-xl font-semibold">
-                  {/* <Link
+                  <h3 className=" justify-self-center text-xl font-semibold">
+                    {/* <Link
                   href={`/blog/${post.slug}`}
                   > */}
-                  {post.title}
-                  {/* </Link> */}
-                </h3>
-                <p className="justify-self-end italic">
-                  {new Date(post.createdAt).toLocaleDateString("en-gb", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </p>
-              </div>
-            </Link>
-          ))}
+                    {post.title}
+                    {/* </Link> */}
+                  </h3>
+                  <p className="justify-self-end italic">
+                    {new Date(post.createdAt).toLocaleDateString("en-gb", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </p>
+                </div>
+              </Link>
+            ))}
         </div>
       </div>
 

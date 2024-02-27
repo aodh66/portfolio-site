@@ -22,7 +22,6 @@ const Footer = () => {
     window.addEventListener("resize", handleResize);
   });
 
-
   return (
     <div className="footerlinks mb-10 mt-10 flex w-full justify-around border-2 border-transparent border-t-gray-500 p-4">
       <a

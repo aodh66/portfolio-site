@@ -14,8 +14,8 @@ const ProjectSection = ({ projects }: ExampleProps) => {
           <Card {...project} />
         ))}
       </div>
-      <div>
-        <Link href={`/portfolio`} className="link justify-self-end ">
+      <div className="mt-2">
+        <Link href={`/portfolio`} className="link justify-self-end text-lg">
           More Projects
         </Link>
       </div>

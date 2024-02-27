@@ -21,7 +21,7 @@ const Card = (props: ExampleProp) => {
       <img
         src={props.imgPath || props.imgUrl}
         alt={props.title}
-        className="h-3/4 max-w-1/3"
+        className="max-w-1/3 h-3/4"
       />
       {props.github ? (
         <div className="flex flex-col gap-1">

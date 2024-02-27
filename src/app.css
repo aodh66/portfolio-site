@@ -36,26 +36,31 @@
 .hero {
   color: hsl(0, 0%, 100%);
   background: var(--bg-color);
-  mix-blend-mode: darken ;
+  mix-blend-mode: darken;
   font-weight: 900;
   font-size: 8vw;
   text-wrap: nowrap;
 }
 
 .card {
-background: var(--card-bg);
-box-shadow: 0 0 10px hsl(0, 0%, 0%);
-overflow: hidden;
-position: relative;
+  background: var(--card-bg);
+  box-shadow: 0 0 10px hsl(0, 0%, 0%);
+  overflow: hidden;
+  position: relative;
 }
 
-.card:hover {
+.card:hover,
+.card.form {
   box-shadow: 0 0 10px var(--light);
 }
 
 .card:hover.blog {
   box-shadow: 0 0 10px hsl(0, 0%, 0%);
 }
+
+/* .card.form {
+  box-shadow: 0 0 10px var(--light);
+} */
 
 .cardSplash {
   transition: 0.5s;
@@ -78,8 +83,21 @@ position: relative;
 
 .card:hover .cardSplash,
 .card:hover .splashTitle {
-opacity: 0%;
+  opacity: 0%;
 }
+
+.form:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgb(255, 208, 0);
+}
+
+.form:valid {
+  box-shadow: 0 0 10px rgb(0, 255, 42);
+}
+
+/* .form:invalid {
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+} */
 
 /* ! FORMAT THE MD WITH THESE  */
 .markdown {
@@ -120,15 +138,6 @@ opacity: 0%;
     font-size: 115.2px;
   }
 }
-
-
-
-
-
-
-
-
-
 
 /* .logo {
   height: 6em;

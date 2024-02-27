@@ -16,7 +16,6 @@ import ProjectSection from "/components/ProjectSection";
 import { TechSection, TechProp } from "/components/TechSection";
 
 export function Home() {
-
   // Site images should be 800x860px to stay consistent
   const projects: ExampleProp[] = [
     {
@@ -46,8 +45,7 @@ export function Home() {
       description:
         "Electron app to periodically or on command back up a folder (Windows).",
       imgPath: "/cardImg/bs-utility.png",
-      imgUrl:
-        "",
+      imgUrl: "",
       github: "https://github.com/aodh66/bs-utility",
       splash: "/cardImg/forest_dark.jpg",
       order: 2,
@@ -65,7 +63,8 @@ export function Home() {
     {
       title: "Dashboard",
       url: "https://dancing-zabaione-3f64c1.netlify.app/",
-      description: "PLACEHOLDER A dashboard app made to interface with the warframe API and a weather one.",
+      description:
+        "PLACEHOLDER A dashboard app made to interface with the warframe API and a weather one.",
       imgPath: "/cardImg/dashboard.png",
       imgUrl: "",
       github: "",
@@ -75,7 +74,8 @@ export function Home() {
     {
       title: "Cars API App",
       url: "https://magnificent-kringle-441279.netlify.app/",
-      description: "PLACEHOLDER An application made to consume an external API.",
+      description:
+        "PLACEHOLDER An application made to consume an external API.",
       imgPath: "/cardImg/carsapi.png",
       imgUrl: "",
       github: "",
@@ -149,7 +149,6 @@ export function Home() {
 
   return (
     <div className="flex flex-col">
-
       <Header />
 
       <Intro />
@@ -159,7 +158,6 @@ export function Home() {
       <TechSection skills={skills} />
 
       <Footer />
-
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "preact/hooks";
 
-import './app.css'
+import "./app.css";
 
 // @ts-ignore
 import Header from "/components/Header";
@@ -22,15 +22,14 @@ import { Card, ExampleProp } from "/components/Card";
 //   order: number;
 // }
 
-const dataArr: ExampleProp[]  = []
+const dataArr: ExampleProp[] = [];
 export function Portfolio() {
   const [data, setData] = useState([]);
   data;
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        
         const firebaseConfig = {
           apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
           authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -40,23 +39,19 @@ export function Portfolio() {
           appId: import.meta.env.VITE_FIREBASE_APP_ID,
           measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
         };
-        
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        
+
         const db = getFirestore(app);
-        
+
         const querySnapshot = await getDocs(collection(db, "projects"));
         dataArr.length = 0;
-        querySnapshot.forEach((doc:any) => {
+        querySnapshot.forEach((doc: any) => {
           // console.log(doc.id, " => ", doc.data().title);
           dataArr.push(doc.data());
           setData(doc.data());
         });
-
-        
-
-
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -67,9 +62,9 @@ export function Portfolio() {
 
   return (
     <div className="flex flex-col">
-    <Header />
+      <Header />
 
-    <h1 className="mb-12 text-5xl font-semibold">Projects</h1>
+      <h1 className="mb-12 text-5xl font-semibold">Projects</h1>
 
       <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2">
         {dataArr.map((dataArr: ExampleProp) => (
@@ -79,5 +74,5 @@ export function Portfolio() {
 
       <Footer />
     </div>
-  )
+  );
 }

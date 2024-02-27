@@ -16,7 +16,7 @@ import { Card, ExampleProp } from "/components/Card";
 //   title: string;
 //   url: string;
 //   description: string;
-//   imgPath: string;
+//   imgPath: string; /cardImg/<imageName>
 //   imgUrl: string;
 //   github: string;
 //   order: number;

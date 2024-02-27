@@ -17,6 +17,7 @@ import { TechSection, TechProp } from "/components/TechSection";
 
 export function Home() {
 
+  // Site images should be 800x860px to stay consistent
   const projects: ExampleProp[] = [
     {
       title: "Destiny Item App",
@@ -62,20 +63,20 @@ export function Home() {
       order: 3,
     },
     {
-      title: "Dashboard?",
-      url: "",
-      description: "Placeholder description",
-      imgPath: "",
+      title: "Dashboard",
+      url: "https://dancing-zabaione-3f64c1.netlify.app/",
+      description: "PLACEHOLDER A dashboard app made to interface with the warframe API and a weather one.",
+      imgPath: "/cardImg/dashboard.png",
       imgUrl: "",
       github: "",
       splash: "/cardImg/forest_med.jpg",
       order: 4,
     },
     {
-      title: "Some API app?",
-      url: "",
-      description: "Placeholder description",
-      imgPath: "",
+      title: "Cars API App",
+      url: "https://magnificent-kringle-441279.netlify.app/",
+      description: "PLACEHOLDER An application made to consume an external API.",
+      imgPath: "/cardImg/carsapi.png",
       imgUrl: "",
       github: "",
       splash: "/cardImg/mountain_med.jpg",

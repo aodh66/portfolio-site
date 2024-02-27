@@ -9,3 +9,5 @@ Tech
 - Node.js
 - Tailwind CSS
 - Vite
+- Hygraph (Blog DB)
+- Firebase (Projects DB)

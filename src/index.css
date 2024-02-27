@@ -51,6 +51,7 @@
   width: 100%;
   left: 0%;
   border-bottom-width: 3px;
+  filter: drop-shadow(-0px -0px 0.75rem var(--light));
 }
 
 .bloglink {

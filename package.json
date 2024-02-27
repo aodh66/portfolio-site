@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.8.0",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "marked-react": "^2.0.0",

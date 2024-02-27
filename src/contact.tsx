@@ -8,16 +8,19 @@ import Header from "/components/Header";
 import Footer from "/components/Footer";
 
 export function Contact() {
-
   return (
     <div className="flex flex-col">
-
       <Header />
 
-    <h1>This is the contact page with an email form</h1>
+      <div className="align-items-center mb-6 flex flex-col">
+        <h1 className="mb-5 text-5xl font-black">Contact</h1>
+        <div className="flex flex-col gap-4">
+          <h2 className="mb-2 text-xl">If you'd like to email me yourself: <strong>aidan.meehan66@gmail.com</strong></h2>
+          <p>There should be a contact form here.</p>
+        </div>
+      </div>
 
-      <Footer  />
-
+      <Footer />
     </div>
   );
 }

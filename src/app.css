@@ -58,7 +58,7 @@ position: relative;
 }
 
 .cardSplash {
-  transition: 0.75s;
+  transition: 0.5s;
   z-index: 1;
   margin-left: -8px;
   position: absolute;
@@ -67,7 +67,7 @@ position: relative;
 }
 
 .splashTitle {
-  transition: 0.75s;
+  transition: 0.5s;
   z-index: 2;
   position: absolute;
   text-shadow: 1px 1px 10px hsl(258, 100%, 7%);

@@ -1,4 +1,10 @@
-// import { useState, useEffect } from "preact/hooks";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { collection, query, where } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import { doc, getDocs } from "firebase/firestore";
+import { useState, useEffect } from "preact/hooks";
+
 import './app.css'
 
 // @ts-ignore
@@ -6,83 +12,83 @@ import Header from "/components/Header";
 // @ts-ignore
 import Footer from "/components/Footer";
 // @ts-ignore
-import { ExampleProp } from "/components/Card";
+import { Card, ExampleProp } from "/components/Card";
 // @ts-ignore
 import ProjectSection from "/components/ProjectSection";
 
-export function Portfolio() {
+interface DBProp {
+  title: string;
+  url: string;
+  description: string;
+  imgPath: string;
+  imgUrl: string;
+  github: string;
+  order: number;
+}
 
-    const projects: ExampleProp[] = [
-      {
-        title: "Destiny Item Application",
-        url: "",
-        description:
-          "React app using Bungie and Steam API to manage ingame inventory.",
-        imgPath: "",
-        imgUrl: "",
-        github: "",
-        splash: "/tempCardImg/forest_light.jpg",
-        order: 0,
-      },
-      {
-        title: "Eclectic Shop",
-        url: "https://ch15-fs-shop.vercel.app/",
-        description: "React fullstack hypothetical shop.",
-        imgPath: "",
-        imgUrl: "",
-        github: "https://github.com/aodh66/ch15-fs-shop",
-        splash: "/tempCardImg/mountain_dark.jpg",
-        order: 1,
-      },
-      {
-        title: "Backup & Save Utility",
-        url: "https://github.com/aodh66/bs-utility",
-        description:
-          "Electron app to periodically or on command back up a folder (Windows).",
-        imgPath: "",
-        imgUrl:
-          "https://raw.githubusercontent.com/aodh66/bs-utility/main/images/bs-utility.png",
-        github: "https://github.com/aodh66/bs-utility",
-        splash: "/tempCardImg/forest_dark.jpg",
-        order: 2,
-      },
-      {
-        title: "Habitica Homage",
-        url: "https://habitica-homage.netlify.app/",
-        description:
-          "Copied with no JS to practice CSS",
-        imgPath: "",
-        imgUrl:
-          "",
-        github: "",
-        splash: "/tempCardImg/mountain_color.jpg",
-        order: 3,
-      },
-      {
-        title: "Placeholder2",
-        url: "",
-        description:
-          "Placeholder description",
-        imgPath: "",
-        imgUrl:
-          "",
-        github: "",
-        splash: "/tempCardImg/forest_med.jpg",
-        order: 4,
-      },
-      {
-        title: "Placeholder3",
-        url: "",
-        description:
-          "Placeholder description",
-        imgPath: "",
-        imgUrl:
-          "",
-        github: "",
-        splash: "/tempCardImg/mountain_med.jpg",
-        order: 5,
-      },
-    ];
+// const firebaseConfig = {
+//   apiKey: "AIzaSyC0MiV536F8BZWBB7PDC3ZPnSO5a_3gOy4",
+//   authDomain: "portfolio-ceb45.firebaseapp.com",
+//   projectId: "portfolio-ceb45",
+//   storageBucket: "portfolio-ceb45.appspot.com",
+//   messagingSenderId: "60602057832",
+//   appId: "1:60602057832:web:16ee420609c2e32a51a7dd",
+//   measurementId: "G-PJ86566167"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+
+// const db = getFirestore(app);
+
+// const querySnapshot = await getDocs(collection(db, "projects"));
+// querySnapshot.forEach((doc:any) => {
+//   // doc.data() is never undefined for query doc snapshots
+//   console.log(doc.id, " => ", doc.data());
+// });
+
+const dataArr: ExampleProp[]  = []
+export function Portfolio() {
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        
+        const firebaseConfig = {
+          apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+          authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+          projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+          storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+          appId: import.meta.env.VITE_FIREBASE_APP_ID,
+          measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        
+        const db = getFirestore(app);
+        
+        const querySnapshot = await getDocs(collection(db, "projects"));
+        // dataArr: ExampleProp[]  = [];
+        dataArr.length = 0;
+        querySnapshot.forEach((doc:any) => {
+          // console.log(doc.id, " => ", doc.data().title);
+          dataArr.push(doc.data());
+          setData(doc.data());
+        });
+
+        
+
+
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [dataArr]);
 
   return (
     <div className="flex flex-col">
@@ -90,9 +96,13 @@ export function Portfolio() {
 
     <h1 className="mb-12 text-5xl font-black">Projects</h1>
 
-    <ProjectSection projects={projects} />
-    <h1>This is the portfolio page with all of my projects ever</h1>
-
+    {/* <div className="align-items-center mb-6 flex flex-col"> */}
+      <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2">
+        {dataArr.map((dataArr: ExampleProp) => (
+          <Card {...dataArr} />
+        ))}
+      </div>
+    {/* </div> */}
 
       <Footer />
     </div>

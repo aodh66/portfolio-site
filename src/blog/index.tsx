@@ -76,7 +76,7 @@ export function Blog() {
       <Header />
 
       <div className="align-items-center mb-6 flex flex-col">
-        <h1 className="mb-2 text-xl font-black">Blog</h1>
+        <h1 className="mb-12 text-5xl font-black">Blog</h1>
         <div className="flex flex-col gap-4">
           {data.map((post: Post) => (
             <Link href={`/blog/${post.slug}`}>

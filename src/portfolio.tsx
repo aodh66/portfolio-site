@@ -88,6 +88,8 @@ export function Portfolio() {
     <div className="flex flex-col">
     <Header />
 
+    <h1 className="mb-12 text-5xl font-black">Projects</h1>
+
     <ProjectSection projects={projects} />
     <h1>This is the portfolio page with all of my projects ever</h1>
 

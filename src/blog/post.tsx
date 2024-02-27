@@ -100,7 +100,7 @@ export const Post: FunctionalComponent<PostProps> = ({ slug }) => {
                   <img
                     src={data.heroImage.url}
                     alt={data.title}
-                    className="w-30 h-20"
+                    className="w-1/2"
                   />
                 </>
               ) : null}

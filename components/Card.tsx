@@ -27,7 +27,7 @@ const Card = (props: ExampleProp) => {
         className="max-w-1/3 h-3/4"
       />
       {props.github ? (
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-3/4">
           <div>
             <a href={props.url} className="link text-lg font-semibold">
               {props.title}

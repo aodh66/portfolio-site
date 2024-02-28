@@ -7,7 +7,7 @@ const Intro = () => {
         {" "}
         <h1 className="hero">Hi I'm Aidan.</h1>
       </div>
-      <div className="mb-3 italic">
+      <div className="mb-3 italic text-lg">
         <p>I'm a Full-Stack Web Developer, currently in the UK.</p>
         <p>
           I love working in close knit teams, and making useful, intuitive sites

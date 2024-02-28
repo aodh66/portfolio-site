@@ -6,26 +6,26 @@ const Header = () => {
       <Link
         activeClassName="active"
         href={`/`}
-        className="link justify-self-start"
+        className="link homelink text-lg font-bold justify-self-start"
       >
         Aidan Meehan
       </Link>
-      <a href={`/`} className="hidden justify-self-center sm:block">
+      {/* <a href={`/`} className="hidden justify-self-center sm:block">
         Logo
-      </a>
+      </a> */}
       {/* <a href={`/`} class="justify-self-center" ><img src={Logo} class="logo" alt="aidan's logo" /></a> */}
       <div className="flex gap-4">
         <Link
           activeClassName="active"
           href={`/blog`}
-          className="link justify-self-end"
+          className="link text-lg font-bold justify-self-end"
         >
           Blog
         </Link>
         <Link
           activeClassName="active"
           href={`/contact`}
-          className="link justify-self-end"
+          className="link text-lg font-bold justify-self-end"
         >
           Contact
         </Link>

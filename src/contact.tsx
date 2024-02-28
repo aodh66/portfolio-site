@@ -43,8 +43,7 @@ export function Contact() {
             <strong>aidan.meehan66@gmail.com</strong>
           </h2>
 
-          <div className="flex flex-col ">
-          <form onSubmit={onSubmit}>
+          <form className="flex flex-col" onSubmit={onSubmit}>
             <label for="return-email" className="mb-2 self-start text-xs">
               Your Email
             </label>
@@ -84,8 +83,6 @@ export function Contact() {
               <p className="self-center">{result}</p>
            </div>
             </form>
-            {/* <script src="https://web3forms.com/client/script.js" async defer></script> */}
-          </div>
         </div>
       </div>
 

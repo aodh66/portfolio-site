@@ -76,6 +76,8 @@
   z-index: 2;
   position: absolute;
   text-shadow: 1px 1px 10px hsl(258, 100%, 7%);
+  /* background-color: hsla(258, 100%, 7%, 0.651);
+  box-shadow: 0 0 10px hsl(0, 0%, 0%); */
   padding: 0px 2px 5px;
   border-radius: 10px;
   pointer-events: none;

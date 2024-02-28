@@ -106,6 +106,11 @@ export function Home() {
       imgUrl: "https://www.svgrepo.com/show/452075/node-js.svg",
     },
     {
+      name: "Next.js",
+      imgPath: "/tech/next-js.svg",
+      imgUrl: "https://www.svgrepo.com/show/306466/next-dot-js.svg",
+    },
+    {
       name: "HTML",
       imgPath: "/tech/html-5.svg",
       imgUrl: "https://www.svgrepo.com/show/452228/html-5.svg",
@@ -114,6 +119,11 @@ export function Home() {
       name: "CSS",
       imgPath: "/tech/css-3.svg",
       imgUrl: "https://www.svgrepo.com/show/452185/css-3.svg",
+    },
+    {
+      name: "Firebase",
+      imgPath: "/tech/firebase.svg",
+      imgUrl: "https://www.svgrepo.com/show/373595/firebase.svg",
     },
     {
       name: "(No)SQL",

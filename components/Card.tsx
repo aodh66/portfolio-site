@@ -1,3 +1,6 @@
+// import ghLogo from "/images/github-mark-white.webp";
+// import ghLogoBig from "/images/GitHub_Logo_White.webp";
+
 interface ExampleProp {
   title: string;
   url: string;
@@ -31,7 +34,13 @@ const Card = (props: ExampleProp) => {
             </a>
           </div>
           <p className="text-xs">{props.description}</p>
-          <a href={props.github}>Github CONSIDER IMAGE HERE</a>
+          <a href={props.github}>Github</a>
+          {/* <a href={props.github}>
+            <div className="flex h-5 gap-1 justify-end">
+              <img src={ghLogoBig} className="h-" alt="Github logo" />
+              <img src={ghLogo} className="h-" alt="Github logo" />
+            </div>
+          </a> */}
         </div>
       ) : (
         <div>

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "preact/hooks";
 
-import liLogo from "/src/assets/In-small-white.png";
-import ghLogo from "/src/assets/github-mark-white.png";
-import liLogoBig from "/src/assets/LinkedIn-med-white2.png";
-import ghLogoBig from "/src/assets/GitHub_Logo_White.png";
+import liLogo from "/cardImg/In-small-white.webp";
+import ghLogo from "/cardImg/github-mark-white.webp";
+import liLogoBig from "/cardImg/LinkedIn-med-white2.webp";
+import ghLogoBig from "/cardImg/GitHub_Logo_White.webp";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);

@@ -14,7 +14,7 @@
 }
 
 .background {
-  background-image: url("./assets/mountain_med.jpg");
+  background-image: url("/cardImg/mountain_med.webp");
   /* background-image: url("./assets/forest_light.jpg"); */
   /* background-image: url("./assets/mountain_darkb.jpg"); */
   background-size: cover;
@@ -122,7 +122,7 @@
 @media screen and (min-width: 768px) {
   .background {
     /* background-image: url("./assets/mountain_colorb.jpg"); */
-    background-image: url("./assets/mountain_medb.jpg");
+    background-image: url("/cardImg/mountain_medb.webp");
     /* background-image: url("./assets/forest_light.jpg"); */
     /* background-image: url("./assets/forest_med.jpg"); */
     /* background-image: url("./assets/mountain_brightb.jpg"); */

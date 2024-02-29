@@ -10,16 +10,15 @@ const Intro = () => {
       <div className="mb-3 italic text-lg">
         <p>I'm a Full-Stack Web Developer, currently in the UK.</p>
         <p>
-          I love working in close knit teams, and making useful, intuitive sites
+          I love working in close-knit teams, and making useful, intuitive sites
           for the end user.
         </p>
       </div>
       <p>
-        I also have an{" "}
-        <strong>
-          <s>undiagnosed obsession</s>
+        I also have <strong>
+          <s>an undiagnosed obsession</s>
         </strong>{" "}
-        keen interest in efficiency through all aspects of my life. As such, in
+        a keen interest in efficiency through all aspects of my life. As such, in
         the Blog section, you can find logs of my journey paring my multiday
         camping kit down to to ludicrous levels, as well as delusional diatribes
         about building ergonomic keyboards/input devices.

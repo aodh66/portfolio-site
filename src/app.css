@@ -119,6 +119,10 @@
   margin: 0.5em;
 }
 
+.markdown a {
+color: hsl(204, 100%, 50%);
+}
+
 @media screen and (min-width: 768px) {
   .background {
     /* background-image: url("./assets/mountain_colorb.jpg"); */

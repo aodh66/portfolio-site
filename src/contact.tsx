@@ -39,7 +39,7 @@ export function Contact() {
         <h1 className="mb-5 text-5xl font-semibold">Contact</h1>
         <div className="flex flex-col gap-4">
           <h2 className="mb-2 text-xl">
-            If you'd like to email me yourself:{" "}
+            If you'd like to email me directly:{" "}
             <strong>aidan.meehan66@gmail.com</strong>
           </h2>
 

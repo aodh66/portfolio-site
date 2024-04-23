@@ -12,7 +12,7 @@ import Footer from "/components/Footer";
 
 const AllPosts = gql`
   query AllPosts {
-    blogPosts(orderBy: publishedAt_DESC) {
+    blogPosts(orderBy: createdAt_DESC) {
       body
       createdAt
       title

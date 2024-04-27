@@ -19,7 +19,7 @@ export function Home() {
   // Site images should be 800x860px to stay consistent
   const projects: ExampleProp[] = [
     {
-      title: "Destiny Item App",
+      title: "Destiny Vault App",
       url: "",
       description:
         "React app using Bungie and Steam API to manage ingame inventory.",

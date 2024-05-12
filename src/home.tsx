@@ -23,7 +23,7 @@ export function Home() {
       url: "",
       description:
         "React app using Bungie and Steam API to manage ingame inventory.",
-      imgPath: "",
+      imgPath: "/images/dva.webp",
       imgUrl: "",
       github: "https://github.com/aodh66/destiny-app",
       splash: "/images/forest_light.webp",

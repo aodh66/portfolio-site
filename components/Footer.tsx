@@ -7,7 +7,7 @@ import ghLogoBig from "/images/GitHub_Logo_White.webp";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
-
+  
   //check screen size
   const handleResize = () => {
     if (window.innerWidth < 767) {
@@ -16,8 +16,13 @@ const Footer = () => {
       setIsMobile(false);
     }
   };
+  
+  // check screen size on component load
+  useEffect(() => {
+    handleResize()
+  }, [])
 
-  // resize event listener
+  // resize event listener if screen size is changed
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });

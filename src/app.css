@@ -79,7 +79,9 @@
 }
 
 .card:hover .cardSplash,
-.card:hover .splashTitle {
+.card:active .cardSplash,
+.card:hover .splashTitle,
+.card:active .splashTitle {
   opacity: 0%;
 }
 

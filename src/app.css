@@ -64,6 +64,7 @@
   position: absolute;
   width: 100%;
   pointer-events: none;
+  opacity: 0%;
 }
 
 .splashTitle {
@@ -76,14 +77,16 @@
   padding: 0px 2px 5px;
   border-radius: 10px;
   pointer-events: none;
-}
-
-.card:hover .cardSplash,
-.card:active .cardSplash,
-.card:hover .splashTitle,
-.card:active .splashTitle {
   opacity: 0%;
 }
+
+/* .card:hover .cardSplash, */
+/* .card:active .cardSplash, */
+/* .card:hover .splashTitle */
+/* .card:active .splashTitle  */
+/* {
+  opacity: 0%;
+} */
 
 .form:focus {
   outline: none;
@@ -135,9 +138,27 @@ color: hsl(204, 100%, 50%);
     /* background-image: url("./assets/mountain_darkb.jpg"); */
   }
 }
+  
+  @media screen and (min-width: 1280px) {
+      .cardSplash {
+        opacity: 100%;
+      }
+      
+      .splashTitle {
+        opacity: 100%;
+      }
+      
+      .card:hover .cardSplash,
+      /* .card:active .cardSplash, */
+      .card:hover .splashTitle
+      /* .card:active .splashTitle  */
+      {
+        opacity: 0%;
+      }
+}
 
-@media screen and (min-width: 1441px) {
-  .hero {
-    font-size: 115.2px;
-  }
+  @media screen and (min-width: 1441px) {
+    .hero {
+      font-size: 115.2px;
+    }
 }

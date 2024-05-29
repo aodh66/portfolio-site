@@ -20,7 +20,7 @@ export function Home() {
   const projects: ExampleProp[] = [
     {
       title: "Destiny Vault App",
-      url: "",
+      url: "https://destiny-app-chi.vercel.app/",
       description:
         "React app using Bungie and Steam API to manage ingame inventory.",
       imgPath: "/images/dva.webp",

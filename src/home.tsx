@@ -43,7 +43,7 @@ export function Home() {
       title: "Backup & Save Utility",
       url: "https://github.com/aodh66/bs-utility",
       description:
-        "Electron app to periodically or on command back up a folder (Windows).",
+        "Electron app to snapshot or periodically back up a folder (Windows).",
       imgPath: "/images/bs-utility.webp",
       imgUrl: "",
       github: "https://github.com/aodh66/bs-utility",
@@ -64,7 +64,7 @@ export function Home() {
       title: "Dashboard",
       url: "https://dancing-zabaione-3f64c1.netlify.app/",
       description:
-        "A simple dashboard app made to display an RSS feed and interface with the Warframe and a weather API.",
+        "Basic dashboard to display an RSS feed + Warframe and a weather API information.",
       imgPath: "/images/dashboard.webp",
       imgUrl: "",
       github: "https://github.com/aodh66/simple-dashboard",
@@ -75,7 +75,7 @@ export function Home() {
       title: "Cars API App",
       url: "https://magnificent-kringle-441279.netlify.app/",
       description:
-        "A simple application made to consume an external API.",
+        "Simple application made to consume an external API.",
       imgPath: "/images/carsapi.webp",
       imgUrl: "",
       github: "https://github.com/aodh66/ch15-react-server",
